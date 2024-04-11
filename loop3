@@ -1,0 +1,29 @@
+// Variable dada
+var i = 500;
+var para = document.getElementById("result");
+
+// Función para verificar si un número es primo
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (var i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Bucle while para iterar a través de los números del 500 al 2
+while (i >= 2) {
+  if (isPrime(i)) {
+    // Si el número es primo, añadirlo al texto del párrafo
+    if (para.textContent === "") {
+      para.textContent += i;
+    } else {
+      para.textContent += ", " + i;
+    }
+  }
+  i--;
+}
