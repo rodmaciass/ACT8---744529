@@ -1,0 +1,40 @@
+// Obtener una referencia al canvas y al contexto
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+// Coordenadas iniciales del círculo
+var circleX = canvas.width / 2;
+var circleY = canvas.height / 2;
+
+// Tamaño del círculo (radio)
+var circleSize = 20;
+
+// Función para dibujar el círculo en el canvas
+function drawCircle() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
+  ctx.fillStyle = "blue";
+  ctx.fill();
+  ctx.closePath();
+}
+
+// Agregar un event listener para el evento de teclado keydown al documento
+document.addEventListener("keydown", function(event) {
+  // Obtener el código de la tecla presionada
+  var key = event.key;
+  
+  // Actualizar las coordenadas del círculo según la tecla presionada
+  if (key === "w") {
+    circleY -= 10; // Mover hacia arriba
+  } else if (key === "s") {
+    circleY += 10; // Mover hacia abajo
+  } else if (key === "a") {
+    circleX -= 10; // Mover hacia la izquierda
+  } else if (key === "d") {
+    circleX += 10; // Mover hacia la derecha
+  }
+  
+  // Volver a dibujar el círculo con las nuevas coordenadas
+  drawCircle();
+});
