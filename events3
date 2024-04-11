@@ -1,0 +1,13 @@
+// Obtener una referencia al elemento contenedor de los botones
+var buttonBar = document.querySelector(".button-bar");
+
+// Agregar un event listener para el evento de clic en el elemento contenedor
+buttonBar.addEventListener("click", function(event) {
+  // Verificar si el elemento clickeado es un botón
+  if (event.target.tagName === "BUTTON") {
+    // Obtener el color del atributo data-color del botón clickeado
+    var color = event.target.getAttribute("data-color");
+    // Establecer el color de fondo del elemento contenedor al color del botón clickeado
+    buttonBar.style.backgroundColor = color;
+  }
+});
