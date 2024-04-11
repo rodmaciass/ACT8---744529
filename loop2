@@ -1,0 +1,18 @@
+// Variables dadas
+var name = "John";
+var para = document.getElementById("result");
+var phonebook = [
+  { name: "Rodrigo", phone: "123-456-7890" },
+  { name: "Cony", phone: "234-567-8901" },
+  { name: "Melania", phone: "345-678-9012" }
+];
+
+// Buscar el nombre en el directorio telefónico
+for (var i = 0; i < phonebook.length; i++) {
+  if (phonebook[i].name === name) {
+    // Si se encuentra el nombre, mostrar el nombre y el número de teléfono
+    para.textContent = "Nombre: " + phonebook[i].name + ", Telefono: " + phonebook[i].phone;
+    // Salir del bucle una vez que se haya encontrado el nombre
+    break;
+  }
+}
