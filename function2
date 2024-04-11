@@ -1,0 +1,28 @@
+// Función para dibujar un rectángulo en el canvas
+function drawRectangle(x, y, width, height, color) {
+  // Limpiar el canvas antes de dibujar el rectángulo
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Establecer el color de relleno del rectángulo
+  ctx.fillStyle = color;
+  
+  // Dibujar el rectángulo en el canvas
+  ctx.fillRect(x, y, width, height);
+}
+
+// Ejemplo de uso de la función:
+// Suponiendo que canvas y ctx ya están definidos y disponibles
+
+// Coordenadas del rectángulo
+var rectX = 50;
+var rectY = 50;
+
+// Dimensiones del rectángulo
+var rectWidth = 100;
+var rectHeight = 75;
+
+// Color del rectángulo
+var rectColor = "blue";
+
+// Llamar a la función para dibujar el rectángulo
+drawRectangle(rectX, rectY, rectWidth, rectHeight, rectColor);
