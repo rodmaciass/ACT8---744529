@@ -1,0 +1,15 @@
+// Array de ejemplo
+var myArray = ["Apple", "Banana", "Orange", "Mango"];
+
+// Obtener la referencia al elemento de lista en el HTML
+var list = document.getElementById("miLista");
+
+// Recorrer el array y agregar elementos de lista al HTML
+for (var i = 0; i < myArray.length; i++) {
+    // Crear un elemento de lista
+    var listItem = document.createElement("li");
+    // Agregar el texto del elemento del array al elemento de lista
+    listItem.textContent = myArray[i];
+    // Añadir el elemento de lista al elemento de lista en el HTML
+    list.appendChild(listItem);
+}
