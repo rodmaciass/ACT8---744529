@@ -1,0 +1,23 @@
+// Obtener una referencia al botón
+var btn = document.getElementById("btn");
+
+// Variable para rastrear el estado del botón
+var clicked = false;
+
+// Función para cambiar el texto del botón
+function toggleButtonText() {
+  // Verificar el estado actual del botón
+  if (clicked) {
+    // Si el botón ha sido clickeado, cambiar el texto a "Click Me"
+    btn.textContent = "Click Me";
+  } else {
+    // Si el botón no ha sido clickeado, cambiar el texto a "Clicked!"
+    btn.textContent = "Clicked!";
+  }
+  
+  // Invertir el estado del botón
+  clicked = !clicked;
+}
+
+// Agregar un event listener para el evento de clic al botón
+btn.addEventListener("click", toggleButtonText);
