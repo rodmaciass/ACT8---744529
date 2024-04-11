@@ -1,0 +1,21 @@
+// Función para generar un número aleatorio entre dos límites
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Función para elegir un nombre aleatorio de un arreglo dado
+function chooseName(namesArray) {
+  // Obtener un índice aleatorio dentro del rango del arreglo de nombres
+  var randomIndex = random(0, namesArray.length - 1);
+  // Obtener el nombre correspondiente al índice aleatorio
+  var randomName = namesArray[randomIndex];
+  // Devolver el nombre aleatorio
+  return randomName;
+}
+
+// Arreglo de nombres de ejemplo
+var names = ["Rodrigo", "Mama", "Papa", "Melania", "Pau"];
+
+// Llamar a la función para elegir un nombre aleatorio y mostrarlo en el párrafo
+var para = document.getElementById("para");
+para.textContent = "Random Name: " + chooseName(names);
