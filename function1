@@ -1,0 +1,15 @@
+// Arreglo de nombres de ejemplo
+var names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+
+// Función para elegir un nombre aleatorio y mostrarlo en el párrafo
+function chooseName() {
+  // Obtener un índice aleatorio dentro del rango del arreglo de nombres
+  var randomIndex = Math.floor(Math.random() * names.length);
+  // Obtener el nombre correspondiente al índice aleatorio
+  var randomName = names[randomIndex];
+  // Mostrar el nombre en el párrafo proporcionado
+  para.textContent = "Random Name: " + randomName;
+}
+
+// Llamar a la función una vez para imprimir un nombre aleatorio
+chooseName();
